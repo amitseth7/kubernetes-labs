@@ -140,6 +140,14 @@ Output should be
 
 **Make sure this is done on all nodes!**
 
+<mark>**At this point reboot all your nodes, so the settings can take effect**</mark>
+
+```bash
+$   sudo reboot
+```
+
+Log back in after the reboot
+
 ## Step-4: Install Kubernetes on Nodes
 
 **on master + worker1 + worker2**
