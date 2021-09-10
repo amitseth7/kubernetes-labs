@@ -174,6 +174,8 @@ $   sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 
 This will take a good 1-2 minutes to complete.
 
+<mark>**Note: Only run this init command ONCE**</mark>
+
 If every thing goes well, you will see a message like
 
 ```console
@@ -247,6 +249,8 @@ Now check the status:
 ```bash
 $   kubectl get nodes
 ```
+
+**Note: It will take 1-2 minutes for the Calico network to initialize**
 
 Output should be
 
