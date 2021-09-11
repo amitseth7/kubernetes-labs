@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-# Lab X.z - Deploy Nginx
+# Lab - Deploy Nginx
 
 
 ## Overview
@@ -15,26 +15,19 @@
 create a folder called `nginx-deployment` on the master node and
 
 ```bash
-$   mkdir -p  /home/ubuntu/k8/nginx-deployment
+$   mkdir -p  ~/kubernets-labs/nginx-deployment
 ```
 
 ## Step 2 - Deployment file
 
-get the [deployment file](deployment-nginx.yaml) and put it in the created folder
-
-```bash
-#Go to the created directory
-$   cd /home/ubuntu/k8/nginx-deployment
-
-#Download the yaml file
-$   wget https://github.com/elephantscale/kubernetes-labs/blob/master/nginx-deployment/deployment-nginx.yaml
-```
+inspect  [deployment file](deployment-nginx.yaml)
 
 ## Step 3 - Apply Deployment file
 
 Apply the config files using `kubectl -apply` command
 
 ```bash
+$   cd ~/kubernets-labs/nginx-deployment
 $   kubectl apply -f deployment-nginx.yaml
 ```
 
@@ -62,6 +55,13 @@ nginx-deployment-7848d4b86f-xdmgc   1/1     Running   0          4m39s   192.168
 
 **Note:** `IP`, `Node` and `Name` might be different for you but status must be `Running`.
 
+## Step 5 - Describe
+
+check your deployment configuration
+
+```bash
+kubectl describe deployment nginx
+```
 
 ## Well done! 👏
 
