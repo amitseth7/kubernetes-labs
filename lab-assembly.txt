@@ -1,4 +1,5 @@
 README.md
 assets
 
-01-install-and-setup
+install-and-setup
+nginx-deployment

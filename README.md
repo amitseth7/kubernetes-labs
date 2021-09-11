@@ -12,4 +12,5 @@ Instructor will provide access to lab environment
 
 ### 1 - Install and Setup
 
-* 1.1 - [Setup a single node kubernetes cluster with minikube](01-install-and-setup/1.1-minikube.md)
+* 1.1 - [Setup a single node kubernetes cluster with minikube](install-and-setup/1-minikube.md)
+* 1.2 - [Setup a multi node kubernetes cluster ](install-and-setup/2-kubernetes-cluster-setup.md)
