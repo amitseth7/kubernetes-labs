@@ -63,6 +63,14 @@ check your deployment configuration
 kubectl describe deployment nginx
 ```
 
+## Step 6 - Remove the deployment
+
+Using `kubectl remove deployment` you can remove your deployment
+
+```bash
+$ kubectl delete deployment nginx-deployment
+```
+
 ## Well done! 👏
 
 Your pods are up and running.
