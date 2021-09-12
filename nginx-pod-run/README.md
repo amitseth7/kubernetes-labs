@@ -143,7 +143,7 @@ open a browser and try to open `http://localhost:8080`
 
 Output will look like:
 
-![](E:\Project\ElephantScale\kubernetes-labs\nginx-pod-run\pf.jpg)
+![](pf.jpg)
 
 use `Ctrl+C` to close `kubectl port-forward`
 
