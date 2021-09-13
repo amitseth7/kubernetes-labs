@@ -1,6 +1,6 @@
-<link rel='stylesheet' href='../assets/css/main.css'/>
+<link rel='stylesheet' href='../../assets/css/main.css'/>
 
-# Lab - Deploy Nginx using command line arguments
+# Lab - Deploy multiple pods using manifest
 
 ## Overview
 

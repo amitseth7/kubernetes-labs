@@ -119,6 +119,11 @@ pre {
     line-height: inherit;
     font-size: 16px;
     border-radius: 3px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 pre code {
     padding: 16px;

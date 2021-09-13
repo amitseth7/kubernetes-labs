@@ -1,5 +1,7 @@
-README.md
 assets
-
+deployments
 install-and-setup
-nginx-deployment
+pods
+todo
+
+README.md
