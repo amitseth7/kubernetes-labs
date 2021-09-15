@@ -14,7 +14,7 @@ In this lab you will how to create a service and access your cluster using that 
 
 ## Step 1 - Dependency
 
-This lab depends on [deploy lab](./deployments/1-nginx/)
+This lab depends on [deploy lab](../deployments/1-nginx/)
 
 deploy the lab, but don't delete it.
 
