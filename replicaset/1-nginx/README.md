@@ -114,8 +114,42 @@ nginx-replicaset-wpxs9   1/1     Running   0          4m58s   192.168.82.140    
 
 **Note:** `IP`, `Node` and `Name` might be different for you but status must be `Running`.
 
+## Step-6: Delete a POD
 
-## Step 6 - Remove the replicaset
+Let's manaully a delete a pod and see what happens
+
+From the above output, let me delete the last pod (nginx-replicaset-wpxs9)
+
+```bash 
+$ kubectl delete pod nginx-replicaset-wpxs9
+```
+
+See the pods running
+
+```bash
+$   kubectl get pods -o wide
+```
+
+We have 8 running!  So ReplicaSet has created another pod to replace the deleted one!
+
+Use `describe` to see what happend
+
+```bash
+$   kubectl describe rs  nginx-replicaset
+```
+
+Under `events` section, look towards the bottom, you might see a line like this
+
+```console
+Events:
+  Type    Reason            Age    From                   Message
+  ----    ------            ----   ----                   -------
+  ...
+  Normal  SuccessfulCreate  2m21s  replicaset-controller  Created pod: nginx-replicaset-t59cw
+
+```
+
+## Step 7 - Remove the replicaset
 
 Using `kubectl remove replicaset` you can remove your replicaset
 
@@ -127,6 +161,14 @@ output will look like:
 
 ```console
 replicaset.apps "nginx-replicaset" deleted
+```
+
+Verify by doing 
+
+```bash
+$   kubectl get rs
+
+$   kubectl get pods -o wide
 ```
 
 ## Well done! 👏

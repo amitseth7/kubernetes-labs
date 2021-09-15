@@ -1,7 +1,11 @@
 assets
+config-map
+daemonset
 deployments
 install-and-setup
+labels
 pods
-todo
-
 README.md
+replicaset
+secret
+todo

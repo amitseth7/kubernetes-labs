@@ -12,14 +12,18 @@ Instructor will provide access to lab environment
 
 ### Install and Setup
 
-* INSTALL-1:  [Setup a single node kubernetes cluster with minikube](install-and-setup/1-minikube.md)
-* INSTALL-2:  [Setup a multi node kubernetes cluster ](install-and-setup/2-kubernetes-cluster-setup.md)
+* __INSTALL-1__ : [Setup a single node kubernetes cluster with minikube](install-and-setup/1-minikube.md)
+* __INSTALL-2__ :   [Setup a multi node kubernetes cluster ](install-and-setup/2-kubernetes-cluster-setup.md)
 
 ### Pods
 
-* POD-1: [Running a pod](pods/1-pod-run/README.md)
-* POD-2: [Deploying pods via manifest](pods/2-pod-manifest/README.md)
+* __POD-1__: [Running a pod](pods/1-pod-run/README.md)
+* __POD-2__: [Deploying pods via manifest](pods/2-pod-manifest/README.md)
+
+### ReplicaSet
+
+* __REPLICA-1__: [Deploy a ReplicaSet](replicaset/1-nginx/README.md)
 
 ### Deployment
 
-* DEPLOY-1: [Deploy Nginx](deployments/1-nginx/README.md) - Deploy multiple replicas of nginx
+* __DEPLOY-1__: [Deploy Nginx](deployments/1-nginx/README.md) - Deploy multiple replicas of nginx
