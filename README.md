@@ -15,6 +15,12 @@ Instructor will provide access to lab environment
 * __INSTALL-1__ : [Setup a single node kubernetes cluster with minikube](install-and-setup/1-minikube.md)
 * __INSTALL-2__ :   [Setup a multi node kubernetes cluster ](install-and-setup/2-kubernetes-cluster-setup.md)
 
+
+### Exploring Kubernetes
+
+* __EXPLORE-1__: [Explore the cluster](exploring/1-explore.md)
+* __EXPLORE-2__: [Setup a dashboard](exploring/2-dashboard.md)
+
 ### Pods
 
 * __POD-1__: [Running a pod](pods/1-pod-run/README.md)

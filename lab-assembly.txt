@@ -2,6 +2,7 @@ assets
 config-map
 daemonset
 deployments
+exploring
 install-and-setup
 labels
 pods
