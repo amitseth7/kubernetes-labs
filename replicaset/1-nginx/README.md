@@ -30,6 +30,15 @@ replicaset.apps/nginx-replicaset created
 ```
 
 ## Step 3 - Verify pods
+
+verify replicaset
+
+```bash
+$   kubectl get rs
+
+$   kubectl get rs  -o wide
+```
+
 To verify that the pods are deployed and working properly execute the following command
 
 ```bash
