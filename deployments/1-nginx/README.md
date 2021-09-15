@@ -10,7 +10,7 @@
 ## Duration
 15 minutes
 
-## Step 1 - Prepare deployment file
+## Step-1: Prepare deployment file
 
 create a folder called `nginx-deployment` on the master node and
 
@@ -18,11 +18,11 @@ create a folder called `nginx-deployment` on the master node and
 $   mkdir -p  ~/kubernets-labs/nginx-deployment
 ```
 
-## Step 2 - Deployment file
+## Step-2: Deployment file
 
 inspect  [deployment file](deployment-nginx.yaml)
 
-## Step 3 - Apply Deployment file
+## Step-3: Apply Deployment file
 
 Apply the config files using `kubectl -apply` command
 
@@ -36,7 +36,7 @@ output will look like:
 deployment.apps/nginx-deployment created
 ```
 
-## Step 4 - Verify pods
+## Step-4: Verify pods
 To verify that the pods are deployed and working properly execute the following command
 
 ```bash
@@ -55,15 +55,32 @@ nginx-deployment-7848d4b86f-xdmgc   1/1     Running   0          4m39s   192.168
 
 **Note:** `IP`, `Node` and `Name` might be different for you but status must be `Running`.
 
-## Step 5 - Describe
+## Step-5: Describe
 
 check your deployment configuration
 
 ```bash
-kubectl describe deployment nginx
+$   kubectl describe deployment nginx
 ```
 
-## Step 6 - Remove the deployment
+## Step-6:  Delete a Pod Manaully
+
+Let's delete a pod manually and see how deployment reacts
+
+```bash
+# replace <POD_ID> with one your Pods ID
+$   kubectl  delete pods  <POD_ID>
+```
+
+Inspect what is going on...
+
+```bash
+$   kubectl get pods -o wide
+
+$   kubectl describe deployment nginx
+```
+
+## Step-7: Remove the deployment
 
 Using `kubectl remove deployment` you can remove your deployment
 
@@ -71,9 +88,16 @@ Using `kubectl remove deployment` you can remove your deployment
 $ kubectl delete deployment nginx-deployment
 ```
 
-## Well done! 👏
+You may see something like this.  Deployment is using ReplicaSet to keep up our desired number of pods!
 
-Your pods are up and running.
+```console
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  62s   deployment-controller  Scaled up replica set nginx-deployment-7848d4b86f to 4
+```
+
+## Lab is Complete! 👏
+
 
 ## References
 

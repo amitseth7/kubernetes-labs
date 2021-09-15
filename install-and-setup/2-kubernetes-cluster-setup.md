@@ -23,7 +23,7 @@ We want to make sure we have unique hostnames, so they are easy to identify.
 **on master**
 
 ```bash
-$  sudo hostnamectl set-hostname k-master
+$  sudo hostnamectl set-hostname master
 
 # verify by
 $   hostname
@@ -32,7 +32,7 @@ $   hostname
 **on worker1**
 
 ```bash
-$  sudo hostnamectl set-hostname k-worker1
+$  sudo hostnamectl set-hostname worker1
 
 # verify by
 $   hostname
@@ -41,7 +41,7 @@ $   hostname
 **on worker2**
 
 ```bash
-$  sudo hostnamectl set-hostname k-worker2
+$  sudo hostnamectl set-hostname worker2
 
 # verify by
 $   hostname
@@ -223,7 +223,7 @@ Output may look like:
 
 ```console
 NAME       STATUS     ROLES                  AGE   VERSION
-k-master   NotReady   control-plane,master   43m   v1.22.1
+master   NotReady   control-plane,master   43m   v1.22.1
 ```
 
 Our master node is not ready!
@@ -256,7 +256,7 @@ Output should be
 
 ```console
 NAME       STATUS   ROLES                  AGE   VERSION
-k-master   Ready    control-plane,master   49m   v1.22.1
+master   Ready    control-plane,master   49m   v1.22.1
 ```
 
 ```bash
@@ -271,11 +271,11 @@ kube-system   calico-kube-controllers-58497c65d5-hv75c   1/1     Running   0    
 kube-system   calico-node-gtlql                          1/1     Running   0          117s
 kube-system   coredns-78fcd69978-hbpbs                   1/1     Running   0          5m31s
 kube-system   coredns-78fcd69978-qpsnt                   1/1     Running   0          5m31s
-kube-system   etcd-k-master                              1/1     Running   2          5m44s
-kube-system   kube-apiserver-k-master                    1/1     Running   2          5m44s
-kube-system   kube-controller-manager-k-master           1/1     Running   0          5m44s
+kube-system   etcd-master                              1/1     Running   2          5m44s
+kube-system   kube-apiserver-master                    1/1     Running   2          5m44s
+kube-system   kube-controller-manager-master           1/1     Running   0          5m44s
 kube-system   kube-proxy-sd68v                           1/1     Running   0          5m31s
-kube-system   kube-scheduler-k-master                    1/1     Running   2          5m44s
+kube-system   kube-scheduler-master                    1/1     Running   2          5m44s
 
 ```
 
@@ -308,9 +308,9 @@ If every thing went well, you should see something like this:
 
 ```console
 NAME        STATUS   ROLES                  AGE   VERSION
-k-master    Ready    control-plane,master   74m   v1.22.1
-k-worker1   Ready    <none>                 91s   v1.22.1
-k-worker2   Ready    <none>                 79s   v1.22.1
+master    Ready    control-plane,master   74m   v1.22.1
+worker1   Ready    <none>                 91s   v1.22.1
+worker2   Ready    <none>                 79s   v1.22.1
 ```
 
 ## Step-8: Testing our Shiny Cluter
@@ -339,10 +339,10 @@ Should see some output like
 
 ```console
 NAME      READY   STATUS    RESTARTS   AGE   IP                NODE        NOMINATED NODE   READINESS GATES
-busybox   1/1     Running   0          80s   192.168.130.129   k-worker1   <none>           <none>
+busybox   1/1     Running   0          80s   192.168.130.129   worker1   <none>           <none>
 ```
 
-Yay, our busybox container is running on `k-worker1`
+Yay, our busybox container is running on `worker1`
 
 Let's delete the pod
 
@@ -371,10 +371,10 @@ You should seee something similar to :
 
 ```console
 NAME     READY   STATUS    RESTARTS   AGE   IP                NODE        NOMINATED NODE   READINESS GATES
-nginx    1/1     Running   0          55s   192.168.130.133   k-worker1   <none>           <none>
-nginx2   1/1     Running   0          34s   192.168.82.129    k-worker2   <none>           <none>
-nginx3   1/1     Running   0          30s   192.168.130.134   k-worker1   <none>           <none>
-nginx4   1/1     Running   0          3s    192.168.82.130    k-worker2   <none>           <none>
+nginx    1/1     Running   0          55s   192.168.130.133   worker1   <none>           <none>
+nginx2   1/1     Running   0          34s   192.168.82.129    worker2   <none>           <none>
+nginx3   1/1     Running   0          30s   192.168.130.134   worker1   <none>           <none>
+nginx4   1/1     Running   0          3s    192.168.82.130    worker2   <none>           <none>
 ```
 
 As we can see, we have 4 nginx servers running across 2 worker nodes!
