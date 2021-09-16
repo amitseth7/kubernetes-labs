@@ -1,13 +1,13 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-# Lab - Service manifest
-
+# Lab - Config Maps
 
 ## Overview
+
 On this lab you will lean how to create a configmap and pass its values to your pod
 
-
 ## Duration
+
 30 minutes
 
 ## Step 1 - configmap file
@@ -24,13 +24,14 @@ $   kubectl apply -f config-map.yaml
 ```
 
 output will look like:
+
 ```console
 configmap/sample-config created
 ```
 
 ## Step 4 - get list of configmaps
 
-run the following command to get list of configmaps on your cluster
+Run the following command to get list of configmaps on your cluster
 
 ```bash
 $ kubectl get configmap
@@ -45,6 +46,7 @@ sample-config      2      77s
 ```
 
 ## Step 4 - Verify configmap
+
 To get manifest of your configmap, run the following
 
 ```bash
@@ -118,7 +120,7 @@ $ printenv
 output will look like:
 
 ```console
-app_env_username=jone
+app_env_username=jane
 KUBERNETES_SERVICE_PORT_HTTPS=443
 KUBERNETES_SERVICE_PORT=443
 HOSTNAME=configmap-pod
@@ -157,6 +159,7 @@ to delete the pod
 #To delete pod
 $ kubectl delete pod configmap-pod
 ```
+
 output
 
 ```console
@@ -176,5 +179,4 @@ output
 configmap "sample-config" deleted
 ```
 
-
-## Well done! 👏
+## Lab is done! 👏

@@ -49,6 +49,10 @@ Instructor will provide access to lab environment
 
 * __LABEL-1__: [Labeling Pods](labels/pod-labels/README.md)
 
+### Config Maps
+
+* __CONFIGMAP-1__: [Create and use config maps](config-map/README.md)
+
 
 ### Rollout
 

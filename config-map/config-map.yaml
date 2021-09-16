@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: sample-config
 data:
-  app_username: jone
+  app_username: jane
   app_password: doe
