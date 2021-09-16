@@ -10,6 +10,6 @@ pods
 README.md
 replicaset
 secret
-service-nginx
+services
 todo
 volumes

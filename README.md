@@ -27,7 +27,7 @@ Instructor will provide access to lab environment
 
 ### ReplicaSet
 
-* __REPLICASET-1__: [Deploy a ReplicaSet](replicaset/1-nginx/README.md)
+* __REPLICASET-1__: [Deploy a ReplicaSet](replicaset/nginx/README.md)
 
 ### DaemonSet
 
@@ -35,12 +35,12 @@ Instructor will provide access to lab environment
 
 ### Deployment
 
-* __DEPLOY-1__: [Deploy Nginx](deployments/1-nginx/README.md) - Deploy multiple replicas of nginx
+* __DEPLOY-1__: [Deploy Nginx](deployments/nginx/README.md) - Deploy multiple replicas of nginx
 * __DEPLOY-2__: [Deploy Blue/Green](deployments/blue-green/README.md)
 
 ### Services
 
-* __SERVICE-1__: [Deploy a service](service-nginx/README.md)
+* __SERVICE-1__: [Deploy a service](services/nginx/README.md)
 
 ### Networking
 
@@ -49,6 +49,7 @@ Instructor will provide access to lab environment
 ### Labels
 
 * __LABEL-1__: [Labeling Pods](labels/pod-labels/README.md)
+* __LABEL-2__: [Pod placement](labels/pod-placement/README.md)
 
 ### Config Maps
 
