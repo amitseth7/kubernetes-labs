@@ -10,15 +10,14 @@
 ## Duration
 15 minutes
 
-## Step-1: Prepare deployment file
 
-create a folder called `nginx-deployment` on the master node and
+## Step-1: Deployment file
+
+Be in the project dir
 
 ```bash
-$   mkdir -p  ~/kubernets-labs/nginx-deployment
+$   cd ~/kubernets-labs/deployments/nginx
 ```
-
-## Step-2: Deployment file
 
 inspect  [deployment file](deployment-nginx.yaml)
 
@@ -27,17 +26,29 @@ inspect  [deployment file](deployment-nginx.yaml)
 Apply the config files using `kubectl -apply` command
 
 ```bash
-$   cd ~/kubernets-labs/nginx-deployment
 $   kubectl apply -f deployment-nginx.yaml
 ```
 
 output will look like:
+
 ```console
 deployment.apps/nginx-deployment created
 ```
 
-## Step-4: Verify pods
-To verify that the pods are deployed and working properly execute the following command
+## Step-4: Verify
+
+```bash
+$   kubectl get deployments
+```
+
+Output may look like:
+
+```console
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   4/4     4            4           8m59s
+```
+
+See running pods.
 
 ```bash
 $   kubectl get pods -o wide
@@ -55,13 +66,17 @@ nginx-deployment-7848d4b86f-xdmgc   1/1     Running   0          4m39s   192.168
 
 **Note:** `IP`, `Node` and `Name` might be different for you but status must be `Running`.
 
+**Q==>  Where are pods are running?  Are they evenly distributed across nodes?**
+
 ## Step-5: Describe
 
 check your deployment configuration
 
 ```bash
-$   kubectl describe deployment nginx
+$   kubectl describe deployment nginx-deployment
 ```
+
+Take a note at the `Events` section at the bottom
 
 ## Step-6:  Delete a Pod Manaully
 
@@ -77,8 +92,12 @@ Inspect what is going on...
 ```bash
 $   kubectl get pods -o wide
 
-$   kubectl describe deployment nginx
+$   kubectl describe deployment nginx-deployment
 ```
+
+**ACTION: Look at `AGE` column of pods.  You can tell which one is replacement pod**
+
+**ACTION: Also look at `Events` section in the describe output.  You will see a replacement Pod being spun up**
 
 ## Step-7: Remove the deployment
 
@@ -86,18 +105,11 @@ Using `kubectl remove deployment` you can remove your deployment
 
 ```bash
 $ kubectl delete deployment nginx-deployment
-```
 
-You may see something like this.  Deployment is using ReplicaSet to keep up our desired number of pods!
-
-```console
-  Type    Reason             Age   From                   Message
-  ----    ------             ----  ----                   -------
-  Normal  ScalingReplicaSet  62s   deployment-controller  Scaled up replica set nginx-deployment-7848d4b86f to 4
+$ kubectl get deployments
 ```
 
 ## Lab is Complete! 👏
-
 
 ## References
 

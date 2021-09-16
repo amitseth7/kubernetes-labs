@@ -25,7 +25,8 @@ Inspect  [pod4 file](label-pod-pro-stable.yaml)
 create the pods
 
 ```bash
-$   cd ~/kubernets-labs/labels
+$   cd ~/kubernetes-labs/labels/pod-labels
+
 $   kubectl apply -f label-pod-dev-canary.yaml -f label-pod-dev-stable.yaml  -f label-pod-pro-canary.yaml  -f label-pod-pro-stable.yaml
 ```
 
@@ -54,11 +55,12 @@ $ kubectl get pods --show-labels
 output will look like:
 
 ```console
-NAME                    READY   STATUS    RESTARTS   AGE     IP                NODE        NOMINATED NODE   READINESS GATES
-pod-labels-dev-canary   1/1     Running   0          2m41s   192.168.130.164   k-worker1   <none>           <none>
-pod-labels-dev-stable   1/1     Running   0          2m41s   192.168.130.165   k-worker1   <none>           <none>
-pod-labels-pro-canary   1/1     Running   0          2m41s   192.168.130.166   k-worker1   <none>           <none>
-pod-labels-pro-stable   1/1     Running   0          2m41s   192.168.82.145    k-worker2   <none>           <none>
+NAME                                READY   STATUS    RESTARTS      AGE     LABELS
+pod-labels-dev-canary               1/1     Running   0             2m17s   app=nginx,environment=dev,release=canary
+pod-labels-dev-stable               1/1     Running   0             2m17s   app=nginx,environment=dev,release=stable
+pod-labels-pro-canary               1/1     Running   0             2m17s   app=nginx,environment=production,release=canary
+pod-labels-pro-stable               1/1     Running   0             2m17s   app=nginx,environment=production,release=stable
+
 ```
 
 ## Step 4 - search for pods
@@ -112,6 +114,29 @@ pod-labels-dev-stable   1/1     Running   0          8m23s
 pod-labels-pro-canary   1/1     Running   0          8m23s
 pod-labels-pro-stable   1/1     Running   0          8m23s
 ```
+
+Let's try some NOT commands
+
+```bash
+$   kubectl get pods -l environment=production,release!=dev
+```
+
+```console
+NAME                    READY   STATUS    RESTARTS   AGE
+pod-labels-pro-canary   1/1     Running   0          4m20s
+pod-labels-pro-stable   1/1     Running   0          4m20s
+```
+
+```bash
+$   kubectl get pods -l 'environment in (production,dev),release notin (canary,test)'
+```
+
+```console
+NAME                    READY   STATUS    RESTARTS   AGE
+pod-labels-dev-stable   1/1     Running   0          7m42s
+pod-labels-pro-stable   1/1     Running   0          7m42s
+```
+
 
 ---
 
