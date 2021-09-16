@@ -12,15 +12,22 @@ In this lab you will how to create a service and access your cluster using that 
 20 minutes
 
 
-## Step 1 - Dependency
+## Step 1 - Deploy
 
-This lab depends on [deploy lab](../deployments/1-nginx/)
 
-deploy the lab, but don't delete it.
+[deployment-nginx.yaml](deployment-nginx.yaml)
 
-## Step 1 - manifest file
+Deploy 
 
-inspect  [service file](service-nginx.yaml)
+```bash
+$   cd ~/kubernets-labs/service-nginx
+$   kubectl apply -f deployment-nginx.yaml
+```
+
+
+## Step 2 - Service manifest file
+
+inspect  [service-nginx.yaml](service-nginx.yaml)
 
 ## Step 3 - Apply service file
 
@@ -54,15 +61,20 @@ nginx-service   NodePort    10.99.46.93   <none>        8080:30007/TCP   61s
 
 ## Step 4 - access cluster
 
-open a browser and open any of the nodes in the cluster with port `30007`
+On terminal you can use
 
 ```bash
-http://nodeIP:30007/
+# replace nodeIP with your node's IP address
+$   curl  nodeIP:30007/
 ```
+
+If you have access to an UI environment, open a browser and open any of the nodes in the cluster with port `30007`
+
+`http://nodeIP:30007/`
+
 output should look like:
 
 ![](pf.jpg)
-
 
 
 ## Step 5 - Delete services
@@ -80,4 +92,4 @@ service "nginx-service" deleted
 ```
 
 
-## Well done! 👏
+## Lab is done! 👏
