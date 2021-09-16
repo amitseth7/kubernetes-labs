@@ -15,7 +15,6 @@ Instructor will provide access to lab environment
 * __INSTALL-1__ : [Setup a single node kubernetes cluster with minikube](install-and-setup/1-minikube.md)
 * __INSTALL-2__ :   [Setup a multi node kubernetes cluster ](install-and-setup/2-kubernetes-cluster-setup.md)
 
-
 ### Exploring Kubernetes
 
 * __EXPLORE-1__: [Explore the cluster](exploring/1-explore.md)
@@ -33,3 +32,11 @@ Instructor will provide access to lab environment
 ### Deployment
 
 * __DEPLOY-1__: [Deploy Nginx](deployments/1-nginx/README.md) - Deploy multiple replicas of nginx
+
+### Services
+
+* __SERVICE-1__: [Deploy a service](service-nginx/README.md)
+
+### Rollout
+
+* __ROLLOUT-1__: [Do a rollout upgrade]()

@@ -14,11 +14,20 @@ In this lab, we will setup a single node kubernetes cluster using [minikube](htt
 
 [Minikube getting started page](https://minikube.sigs.k8s.io/docs/start/) has detailed instructions for various platforms.  Here are the steps for Ubuntu
 
+### Linux
+
 ```bash
 $   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
 $   sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
 
+### Mac
+
+```bash
+$   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+
+$   sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 ```
 
 ## Step-2 : Start Minikube
@@ -139,8 +148,8 @@ $   mk  get namespaces
 $   mk get pods
 #   minikube kubectl --  get pods
 
-$   mk get pods --all-namespaces
-#   minikube kubectl --  get pods --all-namespaces
+$   mk get pods -A
+#   minikube kubectl --  get pods -A
 ```
 
 ##  Step-5: Minikube dashboard

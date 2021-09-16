@@ -18,8 +18,10 @@ inspect  [manifest file](pod-nginx.yaml)
 ## Step 2 -  Apply manifest file
 
 ```bash
+$   cd  ~/kubernetes-labs/pods/2-pod-manifest
+
 # to start the pod in background
-$ kubectl apply -f pod-nginx.yaml
+$   kubectl apply -f pod-nginx.yaml
 ```
 
 Output will look like
@@ -35,7 +37,7 @@ pod/nginx created
 check your pod configuration
 
 ```bash
-$ kubectl describe pods nginx
+$   kubectl describe pods nginx
 ```
 
 output will look like:
@@ -109,7 +111,7 @@ to forward external port to internal port you have to use `port-forwarding`
 use the following command:
 
 ```bash
-$ kubectl port-forward pods/nginx 8080:80
+$   kubectl port-forward pods/nginx 8080:80
 ```
 
 output will look like:
@@ -119,9 +121,18 @@ Forwarding from 127.0.0.1:8080 -> 80
 Forwarding from [::1]:8080 -> 80
 ```
 
-this command will keep the console active, now login the master node using `http://master-node-ip` and access desktop using `Access Via plain http`
+this command will keep the console active,
 
+from another terminal:
+
+```bash
+$   curl localhost:8000/
+```
+
+or if you have access to UI envirnment,
 open a browser and try to open `http://localhost:8080`
+
+
 
 Output will look like:
 
@@ -134,7 +145,7 @@ use `Ctrl+C` to close `kubectl port-forward`
 once you are done, delete the pod
 
 ```bash
-$ kubectl delete pod nginx
+$   kubectl delete pod nginx
 ```
 
 ## Well done! 👏

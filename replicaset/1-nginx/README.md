@@ -20,8 +20,7 @@ inspect  [replicaset file](replicaset-nginx.yaml)
 Apply the config files using `kubectl -apply` command
 
 ```bash
-$   cd ~/kubernets-labs/replicaset/1-nginx/
-$   kubectl apply -f replicaset-nginx.yaml
+$   kubectl apply -f ~/kubernetes-labs/replicaset/1-nginx/replicaset-nginx.yaml
 ```
 
 output will look like:
@@ -158,7 +157,38 @@ Events:
 
 ```
 
-## Step 7 - Remove the replicaset
+## Step-7: Tracking Changes
+
+Now that we have 8 replicas running, apply the manifest again.
+
+```bash
+$   kubectl apply -f ~/kubernetes-labs/replicaset/1-nginx/replicaset-nginx.yaml
+```
+
+And see what happens
+
+```bash
+$   kubectl get rs
+
+$   kubectl get pods -o wide
+```
+
+You will see Kubernetes is deleting the exess (4) pods, to bring the count back to 4.
+
+So how do change replicas?
+- From command line?
+- or using manifest files?
+
+We recommmend using **manifest files**. 
+
+Best practice is:
+- Change the manifest file
+- Check-into version control with a comment ('changing replicas to 8')
+- And then `kubectl apply`
+
+This way we can track changes, and revert back if something goes wrong
+
+## Step 8 - Remove the replicaset
 
 Using `kubectl remove replicaset` you can remove your replicaset
 

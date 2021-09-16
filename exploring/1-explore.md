@@ -131,6 +131,7 @@ Allocated resources:
 
 ```
 
+
 ## Step-3: See all Namespaces
 
 ```bash
@@ -186,4 +187,20 @@ kube-system            kube-proxy-sd68v                             1/1     Runn
 kube-system            kube-scheduler-k-master                      1/1     Running   2          5d8h
 kubernetes-dashboard   dashboard-metrics-scraper-856586f554-cq88x   1/1     Running   0          44m
 kubernetes-dashboard   kubernetes-dashboard-67484c44f6-5f7gj        1/1     Running   0          44m
+```
+
+### Parsing JSON Data with jq
+
+```bash
+$	kubectl get pods -o json | jq -r '.items[].metadata.name'
+
+$	kubectl get pods -o json | jq -r '.items[].metadata.creationTimestamp'
+```
+
+## Step-5: See All Resources
+
+```bash
+$   kubectl get all -A
+
+$   kubectl api-resources
 ```

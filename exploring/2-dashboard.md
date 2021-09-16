@@ -17,7 +17,7 @@ Let's see some UI.  It is a bit of work to get the dashboard working.  But it is
 The following will install dashboard components
 
 ```bash
-$   kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+$   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
 ```
 
 Look at the pods running
@@ -81,3 +81,15 @@ When prompted, enter the **token** you copied from previous step
 ## Step-5: Whew.. Enjoy a nice UI!
 
 <img src="../assets/images/explore-2b-dashboard.png" style="width:90%;">
+
+## Step-5: If a UI Env is not available on the master
+
+Here is a work around:
+
+From your laptop, start an SSH tunnel session to master
+
+```bash
+$   ssh -L 8001:127.0.0.1:8001  ubuntu@master_ip
+```
+
+And then access `localhost:8001` on your local machine on a browser
