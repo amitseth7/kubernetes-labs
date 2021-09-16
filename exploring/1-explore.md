@@ -74,6 +74,12 @@ $   kubectl cluster-info dump | less
 $   kubectl cluster-info dump | jq -C | less -R
 ```
 
+Also try
+
+```bash
+$   kubectl config view
+```
+
 ## Step-2: See all Nodes
 
 ```bash
