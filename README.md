@@ -27,7 +27,11 @@ Instructor will provide access to lab environment
 
 ### ReplicaSet
 
-* __REPLICA-1__: [Deploy a ReplicaSet](replicaset/1-nginx/README.md)
+* __REPLICASET-1__: [Deploy a ReplicaSet](replicaset/1-nginx/README.md)
+
+### DaemonSet
+
+* __DAEMONSET-1__: [Deploy a DaemonSet](daemonset/README.md)
 
 ### Deployment
 
@@ -36,6 +40,10 @@ Instructor will provide access to lab environment
 ### Services
 
 * __SERVICE-1__: [Deploy a service](service-nginx/README.md)
+
+### Networking
+
+* __NETWORK-1__: [Custom DNS settings](networking/dns/DNS.md)
 
 ### Rollout
 
