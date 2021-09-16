@@ -4,7 +4,7 @@
 
 
 ## Overview
-
+On this lab, we are going to create a deployment with 4 pods, the image of this deployment is called `nginx-v1` after creating the original deployment, we will `rollout` to update the image to `nginx-v2`
 
 ## Duration
 20 minutes
