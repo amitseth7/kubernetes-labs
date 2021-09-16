@@ -45,6 +45,11 @@ Instructor will provide access to lab environment
 
 * __NETWORK-1__: [Custom DNS settings](networking/dns/DNS.md)
 
+### Labels
+
+* __LABEL-1__: [Labeling Pods](labels/pod-labels/README.md)
+
+
 ### Rollout
 
 * __ROLLOUT-1__: [Do a rollout upgrade]()

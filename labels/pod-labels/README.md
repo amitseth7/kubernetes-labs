@@ -1,16 +1,16 @@
-<link rel='stylesheet' href='../assets/css/main.css'/>
+<link rel='stylesheet' href='../../assets/css/main.css'/>
 
-# Lab - Service manifest
+# Lab - Labels
 
 ## Overview
 
-On this lab you will lean how to create a configmap and pass its values to your pod
+On this lab you will lean how to assign labels for pods and query by labels
 
 ## Duration
 
 30 minutes
 
-## Step 1 - configmap file
+## Step 1 - Manifest files
 
 Inspect  [pod1 file](label-pod-dev-canary.yaml)
 
@@ -40,12 +40,15 @@ pod/pod-labels-pro-canary created
 pod/pod-labels-pro-stable created
 ```
 
-## Step 3 - get list of configmaps
+## Step 3 - get list of Pods
 
-run the following command to get list of configmaps on your cluster
+run the following command to get list of pods on your cluster
 
 ```bash
 $ kubectl get pods -o wide
+
+# get labels
+$ kubectl get pods --show-labels
 ```
 
 output will look like:
@@ -141,4 +144,4 @@ output will look like:
 No resources found in default namespace.
 ```
 
-## Well done! 👏
+## Lab is done! 👏
