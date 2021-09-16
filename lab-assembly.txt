@@ -5,8 +5,11 @@ deployments
 exploring
 install-and-setup
 labels
+networking
 pods
 README.md
 replicaset
 secret
+service-nginx
 todo
+volumes

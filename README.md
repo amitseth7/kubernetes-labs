@@ -36,6 +36,7 @@ Instructor will provide access to lab environment
 ### Deployment
 
 * __DEPLOY-1__: [Deploy Nginx](deployments/1-nginx/README.md) - Deploy multiple replicas of nginx
+* __DEPLOY-2__: [Deploy Blue/Green](deployments/blue-green/README.md)
 
 ### Services
 
@@ -58,7 +59,6 @@ Instructor will provide access to lab environment
 * __VOLUME-1__: [Using EmptyDir scratch space](volumes/shared-volume-empty/README.md)
 * __VOLUME-2__: [Sharing a persistent volume](volumes/pv-shared/README.md)
 * __VOLUME-3__: [Using shared volume as nginx storage](volumes/pv-nginx/README.md)
-
 
 ### Rollout
 
