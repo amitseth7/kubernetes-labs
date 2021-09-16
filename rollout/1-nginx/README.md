@@ -2,13 +2,16 @@
 
 # Lab - Deploy Nginx
 
-
 ## Overview
-On this lab, we are going to create a deployment with 4 pods, the image of this deployment is called `nginx-v1` after creating the original deployment, we will `rollout` to update the image to `nginx-v2`
+
+On this lab, we are going to create a deployment with 4 pods, the image of this deployment is called `nginx-v1` after creating the original deployment, we will `rollout` to update the image
+to `nginx-v2`
+
+Notice the difference that when we are updating the image instead of using `apply`, we will use `replace`
 
 ## Duration
-20 minutes
 
+20 minutes
 
 ## Step-1: Deployment file
 
@@ -24,6 +27,7 @@ $   kubectl apply -f deployment-nginx.yaml
 ```
 
 output will look like:
+
 ```console
 deployment.apps/nginx-deployment created
 ```
@@ -31,9 +35,11 @@ deployment.apps/nginx-deployment created
 ## Step-2: Expose
 
 - expose the deployment
+
 ```bash
 $ kubectl expose deployment nginx-deployment --port=80 --type=NodePort
 ```
+
 output
 
 ```console
@@ -41,6 +47,7 @@ service/nginx-deployment exposed
 ```
 
 - get nodeport
+
 ```bash
 $  kubectl get service
 ```
@@ -62,6 +69,11 @@ Welcome to Webapp - v1
 ```
 
 ## Step-4: rollout an update
+
+**Note:** Read the entire section before starting the rollout process.
+
+**Note:** monitor the results as soon as possible. it will be fast.
+
 
 inspect v2 [deployment file](deployment-nginx-v2.yaml)
 
@@ -100,8 +112,6 @@ open `http://MASTER-IP:PORT` in a browser, the output should be:
 ```console
 Welcome to Webapp - v2
 ```
-
-
 
 ## Lab is Complete! 👏
 
