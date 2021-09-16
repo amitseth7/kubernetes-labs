@@ -53,6 +53,12 @@ Instructor will provide access to lab environment
 
 * __CONFIGMAP-1__: [Create and use config maps](config-map/README.md)
 
+### Volumes
+
+* __VOLUME-1__: [Using EmptyDir scratch space](volumes/shared-volume-empty/README.md)
+* __VOLUME-2__: [Sharing a persistent volume](volumes/pv-shared/README.md)
+* __VOLUME-3__: [Using shared volume as nginx storage](volumes/pv-nginx/README.md)
+
 
 ### Rollout
 
