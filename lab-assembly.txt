@@ -9,6 +9,7 @@ networking
 pods
 README.md
 replicaset
+rollout
 secret
 services
 todo

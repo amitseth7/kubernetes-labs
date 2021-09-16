@@ -63,4 +63,4 @@ Instructor will provide access to lab environment
 
 ### Rollout
 
-* __ROLLOUT-1__: [Do a rollout upgrade]()
+* __ROLLOUT-1__: [Do a rollout upgrade](rollout/1-nginx/README.md)

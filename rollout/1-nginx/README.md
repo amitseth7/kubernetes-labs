@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='../../assets/css/main.css'/>
 
-# Lab - Deploy Nginx
+# Lab - Rollout Deployment
 
 ## Overview
 
@@ -15,15 +15,20 @@ Notice the difference that when we are updating the image instead of using `appl
 
 ## Step-1: Deployment file
 
-inspect  [deployment file](deployment-nginx.yaml)
+Project dir
+
+```bash
+$   cd ~/kubernetes-labs/rollout/1-nginx
+```
+
+Inspect  [deployment-nginx-v1.yaml](deployment-nginx-v1.yaml)
 
 ## Step-3: Apply Deployment file
 
 Apply the config files using `kubectl -apply` command
 
 ```bash
-$   cd ~/kubernets-labs/rollout/1-nginx
-$   kubectl apply -f deployment-nginx.yaml
+$   kubectl apply -f deployment-nginx-v1.yaml
 ```
 
 output will look like:
@@ -60,7 +65,14 @@ kubernetes         ClusterIP   10.96.0.1       <none>        443/TCP        6m12
 nginx-deployment   NodePort    10.107.20.175   <none>        80:32073/TCP   54s
 ```
 
-try to find the `NodePort` and open it using `http://MASTER-IP:PORT` in a browser
+Find the worker1's IP address and access it.  
+So if the worker's IP is 1.2.3.4  and NodPort is 32073
+
+```bash
+# substitute 1.2.3.4 with your worker node IP
+# substitute 32073 with your service NodePort port
+$   curl   1.2.3.4:32073/
+```
 
 output will look like:
 
@@ -74,13 +86,11 @@ Welcome to Webapp - v1
 
 **Note:** monitor the results as soon as possible. it will be fast.
 
-
-inspect v2 [deployment file](deployment-nginx-v2.yaml)
+Inspect v2  : [deployment-nginx-v2.yaml](deployment-nginx-v2.yaml)
 
 use the `v2` to update nginx from v1 to v2
 
 ```bash
-$   cd ~/kubernets-labs/rollout/1-nginx
 $   kubectl replace  -f deployment-nginx-v2.yaml
 ```
 
@@ -92,26 +102,27 @@ Monitor the status of rollout using the following command:
 $  kubectl rollout status deployment nginx-deployment
 ```
 
-output will look like:
+Note the events section at the end of output.  It will look like:
 
-```console
-Waiting for deployment "nginx-deployment" rollout to finish: 3 out of 4 new replicas have been updated...
-Waiting for deployment "nginx-deployment" rollout to finish: 3 out of 4 new replicas have been updated...
-Waiting for deployment "nginx-deployment" rollout to finish: 3 out of 4 new replicas have been updated...
-Waiting for deployment "nginx-deployment" rollout to finish: 3 out of 4 new replicas have been updated...
-Waiting for deployment "nginx-deployment" rollout to finish: 1 old replicas are pending termination...
-Waiting for deployment "nginx-deployment" rollout to finish: 1 old replicas are pending termination...
-Waiting for deployment "nginx-deployment" rollout to finish: 1 old replicas are pending termination...
-Waiting for deployment "nginx-deployment" rollout to finish: 3 of 4 updated replicas are available...
-```
+<img src="../../assets/images/rollout-1a.png" style="width:90%;"/>
+
+**Note the following**
+
+- Look at how new Pods are being created in new replica-set,  while pods are being removed from old-replica-set
+- Also look at how much time has elapsed since the rollout began (104  - 99 = 5 seconds)
 
 ## Step-5: verify
 
-open `http://MASTER-IP:PORT` in a browser, the output should be:
+Verify if the new rolled out service
+
+```bash
+# substitute 1.2.3.4 with your worker node IP
+# substitute 32073 with your service NodePort port
+$   curl   1.2.3.4:32073/
+```
 
 ```console
 Welcome to Webapp - v2
 ```
 
 ## Lab is Complete! 👏
-
