@@ -79,5 +79,6 @@ Instructor will provide access to lab environment
 ### Practice Labs
 
 * __PRACTICE-Lab-1:__ [Bundle and deploy a jokes server](practice-labs/joke-server/README.md)
-* __PRACTICE-LAB-2:__ [Deploy a wordpress application](practice-labs/wordpress/README.md)
-* __PRACTICE-LAB-3:__ [Deploy RedMine application](practice-labs/redmine/README.md)
+* __PRACTICE-Lab-2:__ [Deploy Pacman and Mario video games!](practice-labs/games/README.md)
+* __PRACTICE-LAB-3:__ [Deploy a wordpress application](practice-labs/wordpress/README.md)
+* __PRACTICE-LAB-4:__ [Deploy RedMine application](practice-labs/redmine/README.md)
