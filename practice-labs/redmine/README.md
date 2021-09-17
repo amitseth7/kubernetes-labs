@@ -7,7 +7,7 @@
 
 ## Overview
 
-This is an **unassisted** lab, snippets of the code will be given to you, and you have to complete them.
+This is an **practice-labs** lab, snippets of the code will be given to you, and you have to complete them.
 
 ### What is Redmine?
 
@@ -41,7 +41,7 @@ complete [mysql-all](mysql-all.yaml) file based on your own knowledge
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/redmine/
+$ cd ~/kubernets-labs/practice-labs/redmine/
 $ kubectl apply -f mysql-all.yaml
 ```
 
@@ -61,7 +61,7 @@ complete [redmin-deployment](redmine-deployment.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/redmine/
+$ cd ~/kubernets-labs/practice-labs/redmine/
 $ kubectl apply -f redmine-deployment.yaml
 ```
 

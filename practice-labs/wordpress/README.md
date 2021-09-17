@@ -7,7 +7,7 @@
 
 ## Overview
 
-This is an **unassisted** lab, snippets of the code will be given to you, and you have to complete them.
+This is an **practice-labs** lab, snippets of the code will be given to you, and you have to complete them.
 
 ### What is WordPress?
 
@@ -48,7 +48,7 @@ complete [mysql-pvc](mysql/secret.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/wordpress/mysql/
+$ cd ~/kubernets-labs/practice-labs/wordpress/mysql/
 $ kubectl apply -f secret.yaml
 ```
 
@@ -64,7 +64,7 @@ complete [mysql-service](mysql/service.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/wordpress/mysql/
+$ cd ~/kubernets-labs/practice-labs/wordpress/mysql/
 $ kubectl apply -f service.yaml
 ```
 
@@ -80,7 +80,7 @@ complete [mysql-deployment](mysql/deployment.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/wordpress/mysql/
+$ cd ~/kubernets-labs/practice-labs/wordpress/mysql/
 $ kubectl apply -f deployment.yaml
 ```
 
@@ -112,7 +112,7 @@ complete [wordpress-deployment](wordpress/deployment.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/wordpress/wordpress/
+$ cd ~/kubernets-labs/practice-labs/wordpress/wordpress/
 $ kubectl apply -f deployment.yaml
 ```
 
@@ -128,7 +128,7 @@ complete [mysql-service](mysql/service.yaml) file
 apply
 
 ```bash
-$ cd ~/kubernets-labs/unassisted/wordpress/wordpress/
+$ cd ~/kubernets-labs/practice-labs/wordpress/wordpress/
 $ kubectl apply -f service.yaml
 ```
 
