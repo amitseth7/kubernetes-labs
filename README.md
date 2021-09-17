@@ -38,6 +38,7 @@ Instructor will provide access to lab environment
 * __DEPLOY-1__: [Basic deployment](deployments/basic/README.md) - Deploy multiple replicas of nginx
 * __DEPLOY-2__: [Rollout deployment](deployments/rollout/README.md)
 * __DEPLOY-3__: [Blue/Green deployment](deployments/blue-green/README.md)
+* __DEPLOY-4__: [Canary deployment and A/B deployment](deployments/canary/README.md)
 
 ### Services
 
