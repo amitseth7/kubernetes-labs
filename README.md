@@ -53,9 +53,10 @@ Instructor will provide access to lab environment
 * __LABEL-1__: [Labeling Pods](labels/pod-labels/README.md)
 * __LABEL-2__: [Pod placement](labels/pod-placement/README.md)
 
-### Config Maps
+### Configurations
 
-* __CONFIGMAP-1__: [Create and use config maps](config-map/README.md)
+* __CONFIG-1__: [Create and use config maps](config-map/README.md)
+* __CONFIG-2__: [Using secrets](secret/README.md)
 
 ### Volumes
 
@@ -63,9 +64,17 @@ Instructor will provide access to lab environment
 * __VOLUME-2__: [Sharing a persistent volume](volumes/pv-shared/README.md)
 * __VOLUME-3__: [Using shared volume as nginx storage](volumes/pv-nginx/README.md)
 
-### Rollout
+### Sidecar
 
-* __ROLLOUT-1__: [Do a rollout upgrade](rollout/1-nginx/README.md)
+* __SIDECAR-1__: [Sidecar usage](sidecar/README.md)
+
+### Metrics
+
+* __METRICS-1__: [Examining Kubernetes metrics](metric-server/README.md)
+
+### Auto Scale
+
+* __AUTO-SCALE-1__: [Autoscaling based on resource usage](autoscale/README.md)
 
 ### Practice Labs
 

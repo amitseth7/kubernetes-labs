@@ -1,10 +1,12 @@
 assets
+autoscale
 config-map
 daemonset
 deployments
 exploring
 install-and-setup
 labels
+metric-server
 networking
 pods
 practice-labs
@@ -12,5 +14,7 @@ README.md
 replicaset
 secret
 services
+sidecar
 todo
+TODO.md
 volumes
