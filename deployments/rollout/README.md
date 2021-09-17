@@ -18,7 +18,7 @@ Notice the difference that when we are updating the image instead of using `appl
 Project dir
 
 ```bash
-$   cd ~/kubernetes-labs/rollout/1-nginx
+$   cd ~/kubernetes-labs/deployments/rollout
 ```
 
 Inspect  [deployment-nginx-v1.yaml](deployment-nginx-v1.yaml)
