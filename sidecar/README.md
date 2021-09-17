@@ -29,7 +29,6 @@ name: sidecar-container
 
 the command for our sidecar is to write some text into the `index.html` and our main container, which is an `nginx` server will read and serv that file
 
-
 apply the file
 
 ```bash
@@ -55,7 +54,7 @@ NAME                          READY   STATUS    RESTARTS   AGE
 sidecar-container             2/2     Running   0          13s
 ```
 
-this is the first time that we are seeing 2/2 in front of a pod
+this is the first time that we are seeing `2/2` in front of a pod, it means two containers are inside this pod and they are both up and running at the same time
 
 ## Step 2 - Service
 
@@ -85,7 +84,7 @@ kubernetes           ClusterIP      10.100.0.1       <none>            443/TCP  
 sidecar-container    LoadBalancer   10.100.180.22    <EXTERNAL-URL>    80:32083/TCP   16s
 ```
 
-Try to open the link in `EXTERNAL-IP`
+Try to open the link in `EXTERNAL-IP` using your own browser.
 
 **Note:**
 
@@ -94,6 +93,5 @@ Try to open the link in `EXTERNAL-IP`
 result of the opening the link would look like:
 
 ![](output.jpg)
-
 
 ## Well done! 👏
