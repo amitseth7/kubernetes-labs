@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-# Lab - Horizontal Scale Up
+# Lab - Sidecar
 
 ## Overview
 
