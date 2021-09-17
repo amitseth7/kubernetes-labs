@@ -197,3 +197,5 @@ Edit `service-all.yaml` and set the version to v3
 Update the service and , try the test-service.sh
 
 Do you see any results?  Why?
+
+## Lab is Complete! 👏
