@@ -66,3 +66,9 @@ Instructor will provide access to lab environment
 ### Rollout
 
 * __ROLLOUT-1__: [Do a rollout upgrade](rollout/1-nginx/README.md)
+
+### Practice Labs
+
+* __PRACTICE-Lab-1:__ [Bundle and deploy a jokes server](practice-labs/joke-server/README.md)
+* __PRACTICE-LAB-2:__ [Deploy a wordpress application](practice-labs/wordpress/README.md)
+* __PRACTICE-LAB-3:__ [Deploy RedMine application](practice-labs/redmine/README.md)

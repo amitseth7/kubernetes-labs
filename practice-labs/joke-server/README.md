@@ -1,3 +1,5 @@
+<link rel='stylesheet' href='../../assets/css/main.css'/>
+
 # Jokes Server
 
 ## Overview
@@ -23,13 +25,13 @@ $   docker run -it -v $(pwd):/app -p5000:5000 jokes-server /bin/bash
 This will drop you into /app directory in container
 
 ```bash
-$   python  jokes-test.py
+$   python3  jokes-test.py
 ```
 
 To run the server manually
 
 ```bash
-$   python /app/app.py
+$   python3 /app/app.py
 ```
 
 From another terminal, access the page
