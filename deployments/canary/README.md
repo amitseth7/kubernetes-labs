@@ -144,6 +144,8 @@ $   kubectl get pods
 
 So now we have 2 v1 + 4 v2
 
+**Note: Inspect the EndPoints for the service.  There should be 8 ( 4 v1 + 4 v2)**
+
 Send some traffic
 
 ```bash
